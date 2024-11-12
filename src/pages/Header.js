@@ -50,7 +50,7 @@ export default function Header(p) {
             toggleIsOpened={toggleIsOpened}
           />
         </div>
-        <div className="fixed right-4 text-white top-5 pointer-events-auto md:hidden items-center">
+        <div className="fixed right-4 text-white top-4 pointer-events-auto md:hidden items-center">
           <button onClick={toggleIsOpened}>
             {isOpened ? (
               <svg
@@ -59,7 +59,7 @@ export default function Header(p) {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="size-6"
+                className="size-8"
               >
                 <path
                   strokeLinecap="round"
@@ -74,7 +74,7 @@ export default function Header(p) {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="size-6"
+                className="size-8"
               >
                 <path
                   strokeLinecap="round"
