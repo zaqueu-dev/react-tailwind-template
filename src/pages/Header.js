@@ -19,9 +19,9 @@ export default function Header(p) {
 
   const navigation = [
     { name: "Home", to: "/" },
-    { name: "Products", to: "/Products" },
-    { name: "About", to: "/About" },
-    { name: "Contact", to: "/Contact" },
+    { name: "Page1", to: "/page1" },
+    { name: "Page2", to: "/page2" },
+    { name: "Page3", to: "/page3" },
   ];
 
   return (
@@ -86,7 +86,7 @@ export default function Header(p) {
           </button>
         </div>
       </div>
-      {p.children}
+      <div className="pt-16">{p.children}</div>
     </>
   );
 }
