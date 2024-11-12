@@ -2,6 +2,7 @@ import Logo from "../components/Logo";
 import Navlinks from "../components/Navlinks";
 import { useState } from "react";
 import NavlinksModal from "../components/NavlinksModal";
+import BurgerMenu from "../components/BurgerMenu";
 
 export default function Header(p) {
   const [isOpened, setIsOpened] = useState(false);
@@ -26,7 +27,7 @@ export default function Header(p) {
 
   return (
     <>
-      <header className="flex fixed z-0 bg-slate-900 text-white h-16 items-center justify-between w-screen md:px-36 px-5 text-2xl">
+      <header className="flex fixed z-0 bg-slate-900 text-white h-16 items-center justify-between w-screen md:px-36 px-5 text-2xl select-none">
         <Logo />
         <Navlinks navigation={navigation} />
       </header>
@@ -52,37 +53,7 @@ export default function Header(p) {
         </div>
         <div className="fixed right-4 text-white top-4 pointer-events-auto md:hidden items-center">
           <button onClick={toggleIsOpened}>
-            {isOpened ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="size-8"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18 18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="size-8"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
-            )}
+            <BurgerMenu isOpened={isOpened} />
           </button>
         </div>
       </div>
