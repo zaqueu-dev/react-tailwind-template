@@ -27,7 +27,7 @@ export default function Header(p) {
 
   return (
     <>
-      <header className="flex fixed z-0 bg-slate-900 text-white h-16 items-center justify-between w-screen md:px-36 px-5 text-2xl select-none">
+      <header className="flex fixed z-0 bg-gray-900 text-white h-16 items-center justify-between w-screen md:px-36 px-5 py-10 text-2xl select-none">
         <Logo />
         <Navlinks navigation={navigation} />
       </header>
@@ -51,13 +51,14 @@ export default function Header(p) {
             toggleIsOpened={toggleIsOpened}
           />
         </div>
-        <div className="fixed right-4 text-white top-4 pointer-events-auto md:hidden items-center">
+        <div className="fixed right-6 text-white top-6 pointer-events-auto md:hidden items-center">
           <button onClick={toggleIsOpened}>
             <BurgerMenu isOpened={isOpened} />
           </button>
         </div>
       </div>
-      <div className="pt-16">{p.children}</div>
+      {/* children */}
+      <div className="pt-24 px-10 md:px-40">{p.children}</div>
     </>
   );
 }
